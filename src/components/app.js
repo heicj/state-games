@@ -33,7 +33,6 @@ export default class App extends Component {
   };
 
   handleUseItem = item => {
-    console.log('in handleUseItem');
     const { room, player } = this.state;
     const index = player.inventory.indexOf(item);
     player.inventory.splice(index, 1);
@@ -44,7 +43,7 @@ export default class App extends Component {
       room,
       player
     });
-  }
+  };
 
   handleNameChange = name => {
     const { player } = this.state;

@@ -2,7 +2,7 @@ const entry = {
   title: 'The Entry Room',
   image: 'entry.jpg',
   //image: 'http://i.dailymail.co.uk/i/pix/2014/06/20/article-0-1EEE989700000578-571_964x619.jpg',
-  description: 'asdlkfja',
+  description: 'The floor of the entry is crumbling under your feet.  A once grand staircase sits in the north end of the room.  A door to the north is unaccessable beyond the crumbling floor. You notice a door to the west and east also.',
   items: [],
   doors: {
     n: 'secondFloor',
