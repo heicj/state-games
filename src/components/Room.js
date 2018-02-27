@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './room.css';
 import SelectItem from './SelectItem.js';
 
-
 const directions = {
   e: 'East',
   w: 'West',
@@ -23,14 +22,14 @@ export default class Room extends Component {
     const imageUrl = require(`../img/${image}`);
 
     return (
-      <section className="room" >
+      <section className="room">
         <h2>{title}</h2>
         <div className="imgDiv" style={{ backgroundImage: `url(${imageUrl})` }}>
         </div>
         <div>
-          { items.length > 0 && <h3>You find in the room:</h3>}
+          {items.length > 0 && <h3>You find in the room:</h3>}
           <SelectItem items={items} onItem={onItem}/>
-          <p>{description} </p>
+          <p>{description}</p>
           <h3>Doors</h3>
           <ul className="doors">
             {Object.keys(doors).map(key => (

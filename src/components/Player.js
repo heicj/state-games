@@ -13,7 +13,6 @@ export default class Player extends Component {
 
   render() {
     const { player, onNameChange, onUse } = this.props;
-    
     const { editing } = this.state;
 
     return (

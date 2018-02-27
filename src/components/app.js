@@ -43,7 +43,6 @@ export default class App extends Component {
     const action = room.use ? room.use(item) : '';
     if(!action) room.items.push(item);
 
-
     this.setState({
       action,
       room,
@@ -70,8 +69,7 @@ export default class App extends Component {
           <Room room={room}
             onMove={this.handleMove}
             onItem={this.handleItem}
-            action={action}
-          />
+            action={action}/>
         </main>
       </div>
     );

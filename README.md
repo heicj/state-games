@@ -22,5 +22,5 @@ https://www.google.com/imgres?imgurl=http%3A%2F%2Flitcult.ru%2Fu%2Fdd%2Flyrics%2
 piano.jpg
 http://infocult.typepad.com/infocult/2013/10/european-abandoned-places.html
 
-seocndFloor.jpg
+secondFloor.jpg
 https://notasprensa.info/7601546-buckingham-palace-ballroom-organ.html
