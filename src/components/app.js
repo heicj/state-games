@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { rooms, start } from './rooms.js';
 import Room from './Room.js';
 import Player from './Player.js';
+import './room.css';
 
 export default class App extends Component {
   
@@ -16,6 +17,7 @@ export default class App extends Component {
 
   handleMove = roomKey => {
     this.setState({
+      action: '',
       room: this.state.rooms[roomKey]
     });
   };
@@ -27,6 +29,7 @@ export default class App extends Component {
     player.inventory.push(item);
 
     this.setState({
+      action: '',
       room,
       player
     });
@@ -37,9 +40,12 @@ export default class App extends Component {
     const index = player.inventory.indexOf(item);
     player.inventory.splice(index, 1);
 
-    room.items.push(item);
+    const action = room.use ? room.use(item) : '';
+    if(!action) room.items.push(item);
+
 
     this.setState({
+      action,
       room,
       player
     });
@@ -52,7 +58,7 @@ export default class App extends Component {
   };
 
   render(){
-    const { player, room } = this.state;
+    const { player, room, action } = this.state;
     return (
       <div>
         <header>
@@ -64,6 +70,7 @@ export default class App extends Component {
           <Room room={room}
             onMove={this.handleMove}
             onItem={this.handleItem}
+            action={action}
           />
         </main>
       </div>

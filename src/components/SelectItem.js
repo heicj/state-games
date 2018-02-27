@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './room.css';
 
 export default class SelectItem extends Component {
   render(){
@@ -6,9 +7,9 @@ export default class SelectItem extends Component {
     if(!items || items.length === 0) return null;
 
     return (
-      <ul>
+      <ul className='roomItems'>
         {items.map(item => (
-          <li key={item.key}>
+          <li  key={item.key}>
             <button onClick={() => onItem(item)}>{item.description}</button>
           </li>
         ))}

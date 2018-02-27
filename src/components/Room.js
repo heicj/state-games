@@ -18,7 +18,7 @@ export default class Room extends Component {
   }
  
   render(){
-    const { room, onMove, onItem } = this.props;
+    const { room, onMove, onItem, action } = this.props;
     const { title, description, image, doors, items } = room;
     const imageUrl = require(`../img/${image}`);
 
@@ -39,6 +39,7 @@ export default class Room extends Component {
               </li>
             ))}
           </ul>
+          {action && <p className="action">{action}</p>}
         </div>
       </section>
     );
