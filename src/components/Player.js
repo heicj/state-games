@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SelectItem from './SelectItem';
 
 export default class Player extends Component {
   
@@ -11,7 +12,7 @@ export default class Player extends Component {
   };
 
   render() {
-    const { player, onNameChange } = this.props;
+    const { player, onNameChange, onUse } = this.props;
     const { editing } = this.state;
 
     return (
@@ -21,6 +22,7 @@ export default class Player extends Component {
           <span>{player.name}</span>
         }
         <button onClick={this.handleEdit}>{editing ? 'Done' : 'Edit'}</button>
+        <SelectItem items={player.inventroy} onItem={onUse}/>
       </div>
     );
   }

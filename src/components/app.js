@@ -9,7 +9,8 @@ export default class App extends Component {
     rooms,
     room: start,
     player: {
-      name: 'Player1'
+      name: 'Player1',
+      inventory: []
     }
   };
 
@@ -18,6 +19,19 @@ export default class App extends Component {
       room: this.state.rooms[roomKey]
     });
   };
+
+  handleUseItem = item => {
+    const { room, player } = this.state;
+    const index = player.inventory.indexOf(item);
+    player.inventroy.splice(index, 1);
+
+    room.items.push(item);
+
+    this.setState({
+      room,
+      player
+    });
+  }
 
   handleNameChange = name => {
     const { player } = this.state;
@@ -31,7 +45,8 @@ export default class App extends Component {
       <div>
         <header>
           <Player player={player}
-            onNameChange={this.handleNameChange}/>
+            onNameChange={this.handleNameChange}
+            onUse={this.handleUseItem}/>
         </header>
         <main>
           <Room room={room}

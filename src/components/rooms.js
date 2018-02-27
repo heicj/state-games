@@ -39,7 +39,12 @@ const living = {
   image: 'living.jpg',
   //image: 'http://i.dailymail.co.uk/i/pix/2014/06/20/article-0-1EEE989700000578-571_964x619.jpg',
   description: 'need description',
-  items: [],
+  items: [
+    {
+      key: 'brick',
+      description: 'brick'
+    }
+  ],
   doors: {
     w: 'entry'
   }
@@ -64,7 +69,20 @@ const bedroom = {
   image: 'bedroom.jpg',
   //image: 'https://s-i.huffpost.com/gen/1108057/images/o-ABANDONED-FARMHOUSE-facebook.jpg',
   description: 'need description',
-  items: [],
+  items: [
+    {
+      key: 'book',
+      description: 'Old decaying book'
+    }, 
+    {
+      key: 'jacket',
+      description: 'Dust covered suit jacket'
+    }, 
+    {
+      key: 'figurine',
+      description: 'Lady figurine'
+    }
+  ],
   doors: {
     e: 'secondFloor'
   }
@@ -75,7 +93,12 @@ const piano = {
   image: 'piano.jpg',
   //image: 'http://infocult.typepad.com/infocult/2013/10/european-abandoned-places.html',
   description: 'need description',
-  items: [],
+  items: [
+    {
+      key: 'firePoker',
+      description: 'Wrought iron poker'
+    }
+  ],
   doors: {
     s: 'secondFloor'
   }
