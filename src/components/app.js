@@ -60,6 +60,7 @@ export default class App extends Component {
     const { player, room, action } = this.state;
     return (
       <div>
+        <h1>Great Escape</h1>
         <header>
           <Player player={player}
             onNameChange={this.handleNameChange}
