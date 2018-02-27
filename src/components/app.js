@@ -20,10 +20,23 @@ export default class App extends Component {
     });
   };
 
+  handleItem = item => {
+    const { room, player } = this.state;
+    const index = room.items.indexOf(item);
+    room.items.splice(index, 1);
+    player.inventory.push(item);
+
+    this.setState({
+      room,
+      player
+    });
+  };
+
   handleUseItem = item => {
+    console.log('in handleUseItem');
     const { room, player } = this.state;
     const index = player.inventory.indexOf(item);
-    player.inventroy.splice(index, 1);
+    player.inventory.splice(index, 1);
 
     room.items.push(item);
 
@@ -51,6 +64,7 @@ export default class App extends Component {
         <main>
           <Room room={room}
             onMove={this.handleMove}
+            onItem={this.handleItem}
           />
         </main>
       </div>

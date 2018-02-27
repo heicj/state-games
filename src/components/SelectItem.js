@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 export default class SelectItem extends Component {
   render(){
     const { items, onItem } = this.props;
+    console.log('in select item', onItem);
     if(!items || items.length === 0) return null;
 
     return (
