@@ -1,6 +1,6 @@
 const entry = {
   title: 'The Entry Room',
-  image: '../img/entry.jpg',
+  image: 'entry.jpg',
   //image: 'http://i.dailymail.co.uk/i/pix/2014/06/20/article-0-1EEE989700000578-571_964x619.jpg',
   description: 'asdlkfja',
   items: [],
@@ -13,8 +13,8 @@ const entry = {
 
 const dining = {
   title: 'Dining Room',
-  //image: '../img/dining.jpg',
-  image: 'http://www.furnitureteams.com/server12-cdn/2016/02/09/inside-old-abandoned-hotels-creepy-old-abandoned-houses-inside-508158debeae2d5b.jpg',
+  image: 'dining.jpg',
+  //image: 'http://www.furnitureteams.com/server12-cdn/2016/02/09/inside-old-abandoned-hotels-creepy-old-abandoned-houses-inside-508158debeae2d5b.jpg',
   description: 'need description',
   items: [],
   doors: {
@@ -25,8 +25,8 @@ const dining = {
 
 const den = {
   title: 'Den',
-  //image: '../img/den.jpg',
-  image: 'https://www.thesun.co.uk/news/2188128/haunting-images-inside-abandoned-mansion-once-owned-by-coca-cola-baron-complete-with-chilling-message-saying-its-fountain-ran-with-blood/',
+  image: 'den.jpg',
+  //image: 'https://www.thesun.co.uk/news/2188128/haunting-images-inside-abandoned-mansion-once-owned-by-coca-cola-baron-complete-with-chilling-message-saying-its-fountain-ran-with-blood/',
   description: 'need description',
   items: [],
   doors: {
@@ -36,8 +36,8 @@ const den = {
 
 const living = {
   title: 'Living Room',
-  //image: '../img/living.jpg',
-  image: 'http://i.dailymail.co.uk/i/pix/2014/06/20/article-0-1EEE989700000578-571_964x619.jpg',
+  image: 'living.jpg',
+  //image: 'http://i.dailymail.co.uk/i/pix/2014/06/20/article-0-1EEE989700000578-571_964x619.jpg',
   description: 'need description',
   items: [],
   doors: {
@@ -47,8 +47,8 @@ const living = {
 
 const secondFloor = {
   title: 'Second Floor Landing',
-  //image: '../img/secondFloor.jpg',
-  image: 'https://notasprensa.info/7601546-buckingham-palace-ballroom-organ.html',
+  image: 'secondFloor.jpg',
+  //image: 'https://notasprensa.info/7601546-buckingham-palace-ballroom-organ.html',
   description: 'need description',
   items: [],
   doors: {
@@ -61,8 +61,8 @@ const secondFloor = {
 
 const bedroom = {
   title: 'Bedroom',
-  //image: '../img/bedroom.jpg',
-  image: 'https://s-i.huffpost.com/gen/1108057/images/o-ABANDONED-FARMHOUSE-facebook.jpg',
+  image: 'bedroom.jpg',
+  //image: 'https://s-i.huffpost.com/gen/1108057/images/o-ABANDONED-FARMHOUSE-facebook.jpg',
   description: 'need description',
   items: [],
   doors: {
@@ -72,8 +72,8 @@ const bedroom = {
 
 const piano = {
   title: 'Piano Room',
-  //image: '../img/piano.jpg',
-  image: 'http://infocult.typepad.com/infocult/2013/10/european-abandoned-places.html',
+  image: 'piano.jpg',
+  //image: 'http://infocult.typepad.com/infocult/2013/10/european-abandoned-places.html',
   description: 'need description',
   items: [],
   doors: {
@@ -83,8 +83,8 @@ const piano = {
 
 const bedroom2 = {
   title: 'Second Bedroom',
-  //image: '../img/bedroom2.jpg',
-  image: 'http://www.news.com.au/travel/world-travel/gloom-service-horror-abandoned-hotels/news-story/8834b3fa6d3205a103c8e50dd749cc58',
+  image: 'bedroom2.jpg',
+  //image: 'http://www.news.com.au/travel/world-travel/gloom-service-horror-abandoned-hotels/news-story/8834b3fa6d3205a103c8e50dd749cc58',
   description: 'need description',
   items: [],
   doors: {
@@ -94,8 +94,8 @@ const bedroom2 = {
 
 const outside = {
   title: 'Outside',
-  //image: '../img/outside.jpg',
-  image: 'https://www.google.com/imgres?imgurl=http%3A%2F%2Flitcult.ru%2Fu%2Fdd%2Flyrics%2F35289%2Ffoto.jpg&imgrefurl=http%3A%2F%2Frifmer.com%2Fvne-konkursa%2Fvashe-tvorchestvo-ili-v-poiskax-pochitatelya%2F135815.html&docid=9Wm3ZAVmD5dJ_M&tbnid=CUdJ3W8bxX7r_M%3A&vet=10ahUKEwjIipK9q8XZAhVJ1mMKHebyCiIQMwgmKAAwAA..i&w=1500&h=1018&hl=en&bih=693&biw=894&q=creepy%20old%20abandoned%20mansions&ved=0ahUKEwjIipK9q8XZAhVJ1mMKHebyCiIQMwgmKAAwAA&iact=mrc&uact=8',
+  image: 'outside.jpg',
+  //image: 'https://www.google.com/imgres?imgurl=http%3A%2F%2Flitcult.ru%2Fu%2Fdd%2Flyrics%2F35289%2Ffoto.jpg&imgrefurl=http%3A%2F%2Frifmer.com%2Fvne-konkursa%2Fvashe-tvorchestvo-ili-v-poiskax-pochitatelya%2F135815.html&docid=9Wm3ZAVmD5dJ_M&tbnid=CUdJ3W8bxX7r_M%3A&vet=10ahUKEwjIipK9q8XZAhVJ1mMKHebyCiIQMwgmKAAwAA..i&w=1500&h=1018&hl=en&bih=693&biw=894&q=creepy%20old%20abandoned%20mansions&ved=0ahUKEwjIipK9q8XZAhVJ1mMKHebyCiIQMwgmKAAwAA&iact=mrc&uact=8',
   description: 'need description',
   items: [],
   doors: {

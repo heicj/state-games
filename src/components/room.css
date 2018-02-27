@@ -1,4 +1,6 @@
 .imgDiv{
-  height: 300px;
-  width: 50%;
+  height: 500px;
+  width: 45%;
+  background-repeat: no-repeat;
+  background-size: cover
 }
