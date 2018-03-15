@@ -8,7 +8,7 @@
     "start": "webpack-dev-server",
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,15 @@
   "homepage": "https://github.com/heicj/state-games#readme",
   "dependencies": {
     "firebase": "^4.11.0",
+    "firebaseui": "^2.6.3",
+    "jest": "^23.0.0-alpha.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "16.2.0",
-    "react-router-dom": "^4.2.2"
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

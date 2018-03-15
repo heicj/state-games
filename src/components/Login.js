@@ -1,11 +1,32 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import firebaseui from 'firebaseui';
+import firebase from 'firebase';
+import { providers } from '../services/firebase';
 
-export default class Login extends Component{
+const ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+class Login extends PureComponent{
+  componentDidMount() {
+    const { origin } = window.location;
+    const { from } = { from: { pathname: '/game' } };
+    const { pathname: redirect } = from;
+    ui.start('#firebaseui-auth-container', {
+      signInSuccessUrl: `${origin}/${redirect}`,
+      credentialHelper: firebaseui.auth.CredentialHelper.NONE,
+      signInOptions:[
+        {
+          provider: providers.EmailAuthProvider.PROVIDER_ID,
+          requireDisplayName: false
+        },
+        providers.GoogleAuthProvider.PROVIDER_ID
+      ]
+    });
+  }
+
   render(){
-    return (
-      <div>
-        login page
-      </div>
-    );
+    return <div id="firebaseui-auth-container"></div>
   }
 }
+
+export default Login;
+
