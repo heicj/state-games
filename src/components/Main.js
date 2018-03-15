@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { rooms, start } from './rooms.js';
+import { connect } from 'react-redux';
 import Room from './Room.js';
 import Player from './Player.js';
 import './room.css';
 
-export default class App extends Component {
+class Main extends Component {
   
   state = {
     rooms,
@@ -55,8 +56,9 @@ export default class App extends Component {
     player.name = name;
     this.setState({ player });
   };
-
+  
   render(){
+    console.log(this.props.user);
     const { player, room, action } = this.state;
     return (
       <div>
@@ -76,3 +78,8 @@ export default class App extends Component {
     );
   }
 }
+
+export default connect (
+  state => ({ user: state.user }),
+  null
+)(Main);
