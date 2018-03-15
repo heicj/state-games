@@ -11,8 +11,8 @@ export default class App extends Component{
         <Router>
           <Switch>
             <Route exact path='/' component={Login}/>
-            <PrivateRoute exact path='/game' component={Main}/>
-            {/* <Route path='/game' component={Main} /> */}
+            {/* <PrivateRoute exact path='/game' component={Main}/> */}
+            <Route path='/game' component={Main} />
             <Redirect to='/' />
           </Switch>
         </Router>

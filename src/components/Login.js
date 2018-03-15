@@ -11,7 +11,7 @@ class Login extends PureComponent{
     const { from } = { from: { pathname: '/game' } };
     const { pathname: redirect } = from;
     ui.start('#firebaseui-auth-container', {
-      signInSuccessUrl: `${origin}/${redirect}`,
+      signInSuccessUrl: `${origin}/game`,
       credentialHelper: firebaseui.auth.CredentialHelper.NONE,
       signInOptions:[
         {
@@ -24,7 +24,7 @@ class Login extends PureComponent{
   }
 
   render(){
-    return <div id="firebaseui-auth-container"></div>
+    return <div id="firebaseui-auth-container"></div>;
   }
 }
 
