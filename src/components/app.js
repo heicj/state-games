@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Main from './Main';
 import Login from './Login';
+import PrivateRoute from './PrivateRoute';
 
 export default class App extends Component{
   render(){
@@ -10,7 +11,8 @@ export default class App extends Component{
         <Router>
           <Switch>
             <Route exact path='/' component={Login}/>
-            <Route path='/game' component={Main} />
+            <PrivateRoute exact path='/game' component={Main}/>
+            {/* <Route path='/game' component={Main} /> */}
             <Redirect to='/' />
           </Switch>
         </Router>
