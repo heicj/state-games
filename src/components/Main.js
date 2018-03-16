@@ -45,7 +45,9 @@ class Main extends Component {
   handleUseItem = item => {
     const { room, player } = this.state;
     const index = player.inventory.indexOf(item);
-    player.inventory.splice(index, 1);
+    const p2 = player.inventory.slice();
+    // player.inventory.splice(index, 1);
+    p2.splice(index, 1);
 
     const action = room.use ? room.use(item) : '';
     if(!action) room.items.push(item);
@@ -53,7 +55,10 @@ class Main extends Component {
     this.setState({
       action,
       room,
-      player
+      player: {
+        name: 'Player1',
+        inventory: p2
+      }
     });
   };
 
@@ -72,16 +77,17 @@ class Main extends Component {
     return (
       <div>
         <h1>Great Escape</h1>
-        <header>
-          <Player player={player}
-            onNameChange={this.handleNameChange}
-            onUse={this.handleUseItem}/>
-        </header>
+    
         <main>
-          <Room room={room}
-            onMove={this.handleMove}
-            onItem={this.handleItem}
-            action={action}/>
+          <div id='mainDisplay'>
+            <Room className='room' room={room}
+              onMove={this.handleMove}
+              onItem={this.handleItem}
+              action={action}/>
+            <Player className='playerDisplay' player={player}
+              onNameChange={this.handleNameChange}
+              onUse={this.handleUseItem}/>
+          </div>
         </main>
         <footer>
           <Link to="/" onClick={logOut}>Log out</Link>

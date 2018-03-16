@@ -5,24 +5,20 @@ import { connect } from 'react-redux';
 import { providers } from '../services/firebase';
 import { clearUser } from './actions';
 
+
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 class Login extends PureComponent{
   componentDidMount() {
     this.props.user ? clearUser() : '';
     const { origin } = window.location;
-    const { from } = { from: { pathname: '/game' } };
-    const { pathname: redirect } = from;
     const { history } = this.props;
 
     ui.start('#firebaseui-auth-container', {
       signInSuccessUrl: `${origin}/game`,
       callbacks: { 
-        signInSuccess: function(currentUser, credential, redirectUrl) {
-          // User successfully signed in.
-          // Return type determines whether we continue the redirect automatically
-          // or whether we leave that to developer to handle.
-          console.log(redirectUrl);
+        signInSuccess: function() {
+          
           setTimeout(() =>  history.push('/game'), 100);
           
           return false;
@@ -40,7 +36,15 @@ class Login extends PureComponent{
   }
 
   render(){
-    return <div id="firebaseui-auth-container"></div>;
+    const imageUrl = require('../img/outside.jpg');
+    return (
+      <div>
+
+        <h1>Sign In To Play The Great Escape</h1>
+        <div id="firebaseui-auth-container"></div>
+        <div className="imgDiv" style={{ backgroundImage: `url(${imageUrl})` }}></div>
+      </div>
+    );
   }
 }
 

@@ -23,13 +23,15 @@ export default class Room extends Component {
 
     return (
       <section className="room">
-        <h2>{title}</h2>
+        <h2 id='roomTitle'>{title}</h2>
         <div className="imgDiv" style={{ backgroundImage: `url(${imageUrl})` }}>
         </div>
         <div>
+          <p>{description}</p>
+
           {items.length > 0 && <h3>You find in the room:</h3>}
           <SelectItem items={items} onItem={onItem}/>
-          <p>{description}</p>
+          
           <h3>Doors</h3>
           <ul className="doors">
             {Object.keys(doors).map(key => (
@@ -39,6 +41,7 @@ export default class Room extends Component {
             ))}
           </ul>
           {action && <p className="action">{action}</p>}
+         
         </div>
       </section>
     );
