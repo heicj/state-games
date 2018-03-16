@@ -29,12 +29,13 @@ class Main extends Component {
     const { room, player } = this.state;
     const index = room.items.indexOf(item);
     room.items.splice(index, 1);
-    player.inventory.push(item);
-
+    //const p = player.inventory.push(item);
+    const p1 = player.slice();
+    p1.push(item);
     this.setState({
       action: '',
       room,
-      player
+      p1
     });
   };
 
