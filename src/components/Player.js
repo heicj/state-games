@@ -18,14 +18,14 @@ class Player extends Component {
     console.log(user.displayName);
     return (
       <div className="player">
-        {/* {editing ? 
+        {editing ? 
           <input value={player.name} onChange={({ target }) => onNameChange(target.value)}/> : 
           <span>{player.name}</span>
-        } */}
+        }
         {user.displayName ? 
           <div>{user.displayName}</div> 
           : 
-          null }
+          player }
         <button onClick={this.handleEdit}>{editing ? 'Done' : 'Edit'}</button>
         <SelectItem items={player.inventory} onItem={onUse}/>
       </div>
