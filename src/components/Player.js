@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import SelectItem from './SelectItem';
 
-export default class Player extends Component {
+class Player extends Component {
   
   state = {
     editing: false
@@ -12,18 +13,27 @@ export default class Player extends Component {
   };
 
   render() {
-    const { player, onNameChange, onUse } = this.props;
+    const { player, onNameChange, onUse, user } = this.props;
     const { editing } = this.state;
-
+    console.log(user.displayName);
     return (
       <div className="player">
-        {editing ? 
+        {/* {editing ? 
           <input value={player.name} onChange={({ target }) => onNameChange(target.value)}/> : 
           <span>{player.name}</span>
-        }
+        } */}
+        {user.displayName ? 
+          <div>{user.displayName}</div> 
+          : 
+          null }
         <button onClick={this.handleEdit}>{editing ? 'Done' : 'Edit'}</button>
         <SelectItem items={player.inventory} onItem={onUse}/>
       </div>
     );
   }
 }
+
+export default connect(
+  state => ({ user: state.user }),
+  null
+)(Player);

@@ -64,7 +64,6 @@ class Main extends Component {
   };
   
   render(){
-    console.log(this.props.user);
     const { player, room, action } = this.state;
     return (
       <div>
@@ -81,7 +80,6 @@ class Main extends Component {
             action={action}/>
         </main>
         <footer>
-          {/* <button onClick={this.handleSignOut}>Sign Out</button> */}
           <Link to="/" onClick={logOut}>Log out</Link>
         </footer>
       </div>
