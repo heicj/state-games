@@ -74,6 +74,7 @@ class Main extends Component {
   
   render(){
     const { player, room, action } = this.state;
+    
     return (
       <div>
         <h1>Great Escape</h1>

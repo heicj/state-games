@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './room.css';
 import SelectItem from './SelectItem.js';
 
@@ -21,6 +22,14 @@ export default class Room extends Component {
     const { title, description, image, doors, items } = room;
     const imageUrl = require(`../img/${image}`);
 
+    // const buttons = <ul className="doors">
+    //   {Object.keys(doors).map(key => (
+    //     <li key={key}>
+    //       <button onClick={() => onMove(doors[key])}>{directions[key]}</button>
+    //     </li>
+    //   ))}
+    // </ul>;
+
     return (
       <section className="room">
         <h2 id='roomTitle'>{title}</h2>
@@ -40,6 +49,7 @@ export default class Room extends Component {
               </li>
             ))}
           </ul>
+          
           {action && <p className="action">{action}</p>}
          
         </div>
