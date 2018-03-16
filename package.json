@@ -7,7 +7,6 @@
     "build": "webpack",
     "start": "webpack-dev-server",
     "lint": "eslint .",
-    "pretest": "npm run lint",
     "test": "jest"
   },
   "repository": {

@@ -1,12 +1,15 @@
 import React, { PureComponent } from 'react';
 import firebaseui from 'firebaseui';
 import firebase from 'firebase';
+import { connect } from 'react-redux';
 import { providers } from '../services/firebase';
+import { clearUser } from './actions';
 
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 class Login extends PureComponent{
   componentDidMount() {
+    this.props.user ? clearUser() : '';
     const { origin } = window.location;
     const { from } = { from: { pathname: '/game' } };
     const { pathname: redirect } = from;
@@ -29,7 +32,7 @@ class Login extends PureComponent{
       signInOptions:[
         {
           provider: providers.EmailAuthProvider.PROVIDER_ID,
-          requireDisplayName: false
+          requireDisplayName: true
         },
         providers.GoogleAuthProvider.PROVIDER_ID
       ]
@@ -41,5 +44,8 @@ class Login extends PureComponent{
   }
 }
 
-export default Login;
+export default connect(
+  state => ({ user: state.user }),
+  { clearUser }
+)(Login);
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { rooms, start } from './rooms.js';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Room from './Room.js';
+import { addUser, logOut } from './actions';
 import Player from './Player.js';
 import './room.css';
 
@@ -56,6 +58,10 @@ class Main extends Component {
     player.name = name;
     this.setState({ player });
   };
+
+  handleSignOut = () => {
+    logOut();
+  };
   
   render(){
     console.log(this.props.user);
@@ -74,6 +80,10 @@ class Main extends Component {
             onItem={this.handleItem}
             action={action}/>
         </main>
+        <footer>
+          {/* <button onClick={this.handleSignOut}>Sign Out</button> */}
+          <Link to="/" onClick={logOut}>Log out</Link>
+        </footer>
       </div>
     );
   }
@@ -81,5 +91,5 @@ class Main extends Component {
 
 export default connect (
   state => ({ user: state.user }),
-  null
+  { addUser, logOut }
 )(Main);
