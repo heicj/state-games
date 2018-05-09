@@ -22,20 +22,13 @@ export default class Room extends Component {
     const { title, description, image, doors, items } = room;
     const imageUrl = require(`../img/${image}`);
 
-    // const buttons = <ul className="doors">
-    //   {Object.keys(doors).map(key => (
-    //     <li key={key}>
-    //       <button onClick={() => onMove(doors[key])}>{directions[key]}</button>
-    //     </li>
-    //   ))}
-    // </ul>;
-
     return (
       <section className="room">
         <h2 id='roomTitle'>{title}</h2>
         <div className="imgDiv" style={{ backgroundImage: `url(${imageUrl})` }}>
         </div>
         <div>
+          {action && <p className="action">{action}</p>}
           <p>{description}</p>
 
           {items.length > 0 && <h3>You find in the room:</h3>}
@@ -50,8 +43,6 @@ export default class Room extends Component {
             ))}
           </ul>
           
-          {action && <p className="action">{action}</p>}
-         
         </div>
       </section>
     );
